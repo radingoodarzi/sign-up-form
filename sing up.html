@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/singup.css" />
+  </head>
+  <body>
+    <div class="cart">
+      <a href="index.html" class="back-btn">← بازگشت به سایت</a>
+      <div class="title"><b>ساخت حساب کاربری</b></div>
+
+      <form>
+        <div class="form-row"></div>
+        <div class="form-group" style="flex: 1">
+          <label for="name">نام</label>
+          <input id="name" type="text" required placeholder="مثال:رضا" />
+        </div>
+
+        <div class="form-group" style="flex: 1">
+          <label for="name2">نام خانوادگی</label>
+          <input id="name2" type="text" required placeholder="مثال:اکبری" />
+        </div>
+
+        <div class="form-group" style="flex: 1">
+          <label for="email">ایمیل</label>
+          <input
+            id="email"
+            type="email"
+            required
+            placeholder="مثال:emailtext@gmail.com"
+          />
+        </div>
+
+        <div class="form-group" style="flex: 1">
+          <label for="phone">موبایل</label>
+          <input
+            type="tel"
+            id="phone"
+            maxlength="11"
+            placeholder="09123456789"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">رمز عبور</label>
+          <input
+            id="password"
+            type="tel"
+            type="password"
+            required
+            placeholder="حداقل 8 کاراکتر"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password2">تکرار رمز عبور</label>
+          <input
+            id="password2"
+            type="password"
+            required
+            placeholder="رمز را مجدد وارد کنید"
+          />
+        </div>
+
+        <button type="submit" class="btn">عضویت</button>
+
+        <div class="footer">
+          قبلاً ثبت‌نام کرده‌اید؟ <a href="login.html">وارد شوید</a>
+        </div>
+      </form>
+    </div>
+    <script>
+      const phone = document.getElementById("phone");
+
+      phone.addEventListener("input", function () {
+        this.value = this.value.replace(/\D/g, "");
+      });
+    </script>
+  </body>
+</html>
